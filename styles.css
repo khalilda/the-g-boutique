@@ -1,0 +1,189 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
+
+.burger-menu {
+    font-size: 24px;
+}
+
+.logo {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.languages {
+    margin-right: 15px;
+}
+
+.basket-icon {
+    font-size: 24px;
+}
+
+/* Search Bar */
+.search-bar {
+    padding: 10px;
+    background-color: #f1f1f1;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+}
+
+/* Hero Image Section */
+.hero-image {
+    background-image: url('hero.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    position: relative;
+}
+
+.hero-button {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+}
+
+/* Brand Slider */
+.brand-slider-container {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.brand-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.brand-item {
+    min-width: 150px;
+    margin-right: 10px;
+    background-color: #ddd;
+    padding: 20px;
+    text-align: center;
+}
+
+.brand-prev, .brand-next {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Bestsellers Section */
+.bestsellers {
+    padding: 10px;
+}
+
+.bestsellers-slider-container {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.bestsellers-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.bestseller-item {
+    min-width: 150px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.bestsellers-prev, .bestsellers-next {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* CONNECT WITH US Section */
+.connect-with-us {
+    padding: 10px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #000;
+}
+
+/* Expandable Sections */
+.expandable-section {
+    padding: 10px;
+    background-color: #f1f1f1;
+    margin-bottom: 10px;
+}
+
+.expand-button {
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    background-color: #ddd;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.expand-button:after {
+    content: " +";
+    float: right;
+}
+
+.content {
+    display: none;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.content ul li {
+    margin-bottom: 5px;
+}
+
+.content ul li a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
