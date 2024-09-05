@@ -3,19 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Website Title</title>
+    <title>G-boutique</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <!-- Header -->
     <header>
-        <div class="burger-menu">&#9776;</div>
+        <div class="burger-menu" id="openMenu">&#9776;</div> <!-- Burger icon for menu -->
         <div class="logo">G-boutique</div>
         <div class="header-right">
             <div class="languages">EN | AR | HE</div>
             <div class="basket-icon">🛒</div>
         </div>
     </header>
+
+    <!-- Burger Menu Section -->
+    <div id="burgerMenu" class="menu-overlay">
+        <div class="menu-header">
+            <span class="close-btn" id="closeMenu">X</span>
+        </div>
+        <div class="menu-content">
+            <ul>
+                <li>
+                    <button class="dropdown-btn">She</button>
+                    <ul class="submenu">
+                        <li><a href="#">In Stock</a></li>
+                        <li><a href="#">Pre-Order</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <button class="dropdown-btn">He</button>
+                    <ul class="submenu">
+                        <li><a href="#">In Stock</a></li>
+                        <li><a href="#">Pre-Order</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <button class="dropdown-btn">Kids</button>
+                    <ul class="submenu">
+                        <li><a href="#">NB - 24 Months</a></li>
+                        <li><a href="#">2 - 7 Years</a></li>
+                        <li><a href="#">8 - 20 Years</a></li>
+                        <li><a href="#">View All</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
 
     <!-- Search Bar -->
     <div class="search-bar">
@@ -24,7 +59,7 @@
 
     <!-- Main Content -->
     <main>
-        <!-- Example sections: Replace these with your actual content -->
+        <!-- Hero Section -->
         <div class="hero-image">
             <button class="hero-button">Shop Now</button>
         </div>
@@ -33,7 +68,6 @@
         <div class="brand-slider-container">
             <button class="brand-prev">&#10094;</button>
             <div class="brand-slider">
-                <!-- Add your brand images here -->
                 <div class="brand-item">Brand 1</div>
                 <div class="brand-item">Brand 2</div>
                 <div class="brand-item">Brand 3</div>
@@ -47,7 +81,6 @@
             <div class="bestsellers-slider-container">
                 <button class="bestsellers-prev">&#10094;</button>
                 <div class="bestsellers-slider">
-                    <!-- Add your products here -->
                     <div class="bestseller-item">
                         <img src="product1.jpg" alt="Product 1">
                         <p>Product Name 1</p>
@@ -58,7 +91,6 @@
                         <p>Product Name 2</p>
                         <p>$89.99</p>
                     </div>
-                    <!-- Add more products as needed -->
                 </div>
                 <button class="bestsellers-next">&#10095;</button>
             </div>

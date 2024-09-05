@@ -1,22 +1,41 @@
+// Burger Menu
+const burgerMenu = document.getElementById('burgerMenu');
+const openMenu = document.getElementById('openMenu');
+const closeMenu = document.getElementById('closeMenu');
+
+openMenu.addEventListener('click', () => {
+    burgerMenu.style.width = "100%";
+});
+
+closeMenu.addEventListener('click', () => {
+    burgerMenu.style.width = "0";
+});
+
+// Dropdown Menu
+const dropdownBtns = document.querySelectorAll('.dropdown-btn');
+
+dropdownBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const submenu = btn.nextElementSibling;
+        submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+    });
+});
+
 // Bestsellers Slider
 const bestsellersSlider = document.querySelector('.bestsellers-slider');
 const bestsellersPrevBtn = document.querySelector('.bestsellers-prev');
 const bestsellersNextBtn = document.querySelector('.bestsellers-next');
 
-let scrollAmount = 0;
-
 bestsellersNextBtn.addEventListener('click', () => {
-    bestsellersSlider.scrollTo({
-        top: 0,
-        left: (scrollAmount += bestsellersSlider.clientWidth / 2), // Adjust scroll distance as needed
+    bestsellersSlider.scrollBy({
+        left: 200,
         behavior: 'smooth'
     });
 });
 
 bestsellersPrevBtn.addEventListener('click', () => {
-    bestsellersSlider.scrollTo({
-        top: 0,
-        left: (scrollAmount -= bestsellersSlider.clientWidth / 2),
+    bestsellersSlider.scrollBy({
+        left: -200,
         behavior: 'smooth'
     });
 });
@@ -26,20 +45,16 @@ const brandSlider = document.querySelector('.brand-slider');
 const brandPrevBtn = document.querySelector('.brand-prev');
 const brandNextBtn = document.querySelector('.brand-next');
 
-let brandScrollAmount = 0;
-
 brandNextBtn.addEventListener('click', () => {
-    brandSlider.scrollTo({
-        top: 0,
-        left: (brandScrollAmount += brandSlider.clientWidth / 2), // Adjust scroll distance as needed
+    brandSlider.scrollBy({
+        left: 200,
         behavior: 'smooth'
     });
 });
 
 brandPrevBtn.addEventListener('click', () => {
-    brandSlider.scrollTo({
-        top: 0,
-        left: (brandScrollAmount -= brandSlider.clientWidth / 2),
+    brandSlider.scrollBy({
+        left: -200,
         behavior: 'smooth'
     });
 });
@@ -51,5 +66,6 @@ expandButtons.forEach(button => {
     button.addEventListener('click', () => {
         const content = button.nextElementSibling;
         content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        button.innerHTML = content.style.display === 'block' ? 'Customer Service &#8722;' : 'Customer Service &#43;';
     });
 });
