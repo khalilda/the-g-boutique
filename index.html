@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>G-boutique</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,7 +15,9 @@
     <!-- Header -->
     <header>
         <div class="burger-menu" id="openMenu">&#9776;</div> <!-- Burger icon for menu -->
-        <div class="logo">G-boutique</div>
+        <div class="logo">
+            <img src="images/brands/Logo G Boutique.svg" alt="G-boutique Logo" class="logo-img">
+        </div>
         <div class="header-right">
             <div class="languages">EN | AR | HE</div>
             <div class="basket-icon">🛒</div>
@@ -65,15 +71,25 @@
         </div>
 
         <!-- Brand Slider -->
-        <div class="brand-slider-container">
-            <button class="brand-prev">&#10094;</button>
-            <div class="brand-slider">
-                <div class="brand-item">Brand 1</div>
-                <div class="brand-item">Brand 2</div>
-                <div class="brand-item">Brand 3</div>
+        <section class="brand-slider">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="images/brands/image 1.svg" alt="Brand 1"></div>
+                    <div class="swiper-slide"><img src="images/brands/image 2.svg" alt="Brand 2"></div>
+                    <div class="swiper-slide"><img src="images/brands/image 3.svg" alt="Brand 3"></div>
+                    <div class="swiper-slide"><img src="images/brands/image 4.svg" alt="Brand 4"></div>
+                    <div class="swiper-slide"><img src="images/brands/image 5.svg" alt="Brand 5"></div>
+                    <div class="swiper-slide"><img src="images/brands/image 6.svg" alt="Brand 6"></div>
+                    <div class="swiper-slide"><img src="images/brands/image 7.svg" alt="Brand 7"></div>
+                    <div class="swiper-slide"><img src="images/brands/image 8.svg" alt="Brand 8"></div>
+                    <div class="swiper-slide"><img src="images/brands/image 9.svg" alt="Brand 9"></div>
+                    <div class="swiper-slide"><img src="images/brands/image 10.svg" alt="Brand 10"></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
-            <button class="brand-next">&#10095;</button>
-        </div>
+        </section>
+        
 
         <!-- Bestsellers Section -->
         <section class="bestsellers">
@@ -100,9 +116,9 @@
         <section class="connect-with-us">
             <h2>CONNECT WITH US</h2>
             <div class="social-icons">
-                <a href="https://www.instagram.com" target="_blank">Instagram</a>
-                <a href="https://www.whatsapp.com" target="_blank">WhatsApp</a>
-                <a href="https://www.snapchat.com" target="_blank">Snapchat</a>
+                <a href="https://www.instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.whatsapp.com" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.snapchat.com" target="_blank" class="social-icon"><i class="fab fa-snapchat"></i></a>
             </div>
         </section>
 
@@ -131,6 +147,9 @@
         <p>&copy; 2024 G-boutique</p>
     </footer>
 
-    <script src="scripts.js"></script>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+  
 </body>
 </html>
