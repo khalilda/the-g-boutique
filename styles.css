@@ -114,7 +114,7 @@ header {
 .swiper-wrapper {
     display: flex;
     align-items: center;
-    gap: 30px;
+    /* gap: 30px; */
 }
 
 .swiper-slide {
@@ -189,4 +189,22 @@ header {
 
 .expand-button:hover {
     background-color: #ddd;
+}
+
+
+/* Footer Styles */
+footer {
+    background-color: #333; /* Dark background for contrast */
+    color: #fff;            /* White text color for readability */
+    text-align: center;     /* Center align text */
+    padding: 20px;          /* Add padding around the content */
+    position: relative;     /* Ensure footer stays at the bottom */
+    bottom: 0;              /* Position footer at the bottom */
+    width: 100%;            /* Full width */
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+}
+
+.footer-bottom {
+    margin-top: 20px;       /* Space between content and bottom */
+    font-size: 14px;        /* Font size for bottom text */
 }
