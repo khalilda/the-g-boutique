@@ -138,26 +138,30 @@ header {
 
 /* Swiper Navigation Buttons */
 .swiper-button-next, .swiper-button-prev {
-    color: #000; /* Change color to fit your design */
+    color: #000; /* Change arrow color */
+    /* background-color: rgba(255, 255, 255, 0.7); Add a semi-transparent background */
     border-radius: 50%; /* Circular shape */
-    width: 30px; /* Smaller size */
-    height: 30px; /* Smaller size */
+    width: 30px; /* Adjust width */
+    height: 30px; /* Adjust height */
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 10px; /* Smaller icon size */
-    z-index: 10; /* Ensure they are above other elements */
+    font-size: 14px; /* Adjust arrow icon size */
+    z-index: 10; /* Ensure arrows are on top of other content */
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); Optional: add shadow for better visibility */
 }
 
+/* Next button */
 .swiper-button-next {
-    right: 10px; /* Position to the right */
-    top: 50%;
+    right: 10px; /* Adjust to place closer to the content */
+    top: 85%;
     transform: translateY(-50%);
 }
 
+/* Previous button */
 .swiper-button-prev {
-    left: 10px; /* Position to the left */
-    top: 50%;
+    left: 10px; /* Adjust to place closer to the content */
+    top: 85%;
     transform: translateY(-50%);
 }
 
@@ -169,6 +173,7 @@ header {
 .swiper-pagination-bullet-active {
     opacity: 1;
 }
+
 
 
 
