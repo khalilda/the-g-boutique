@@ -12,17 +12,24 @@
 
     <!-- Header -->
     <header>
-        <div class="burger-menu" id="openMenu">&#9776;</div> <!-- Burger icon for menu -->
+        <div class="burger-menu" id="openMenu">&#9776;</div> 
         <div class="logo">
             <a href="index.html">
                 <img src="images/brands/Logo G Boutique.svg" alt="The G Boutique Logo" class="logo">
             </a>
         </div>
         <div class="header-right">
-            <div class="languages">EN | AR | HE</div>
+            <div id="language-switcher">
+                <a href="languages/en.json" data-lang="en">EN</a> | 
+                <a href="languages/ar.json" data-lang="ar">AR</a> | 
+                <a href="languages/he.json" data-lang="he">HE</a>
+              </div>
+              
             <div class="basket-icon">🛒</div>
         </div>
     </header>
+
+    <!-- <div id="header-placeholder"></div> -->
 
     <!-- Burger Menu Section -->
     <div id="burgerMenu" class="menu-overlay">
@@ -34,24 +41,24 @@
                 <li>
                     <button class="dropdown-btn">She</button>
                     <ul class="submenu">
-                        <li><a href="#">In Stock</a></li>
-                        <li><a href="#">Pre-Order</a></li>
+                        <li><a href="burger menu/She/stock.html">In Stock</a></li>
+                        <li><a href="burger menu/She/pre-order.html">Pre-Order</a></li>
                     </ul>
                 </li>
                 <li>
                     <button class="dropdown-btn">He</button>
                     <ul class="submenu">
-                        <li><a href="#">In Stock</a></li>
-                        <li><a href="#">Pre-Order</a></li>
+                        <li><a href="burger menu/He/stock.html">In Stock</a></li>
+                        <li><a href="burger menu/He/pre-order.html">Pre-Order</a></li>
                     </ul>
                 </li>
                 <li>
                     <button class="dropdown-btn">Kids</button>
                     <ul class="submenu">
-                        <li><a href="#">NB - 24 Months</a></li>
-                        <li><a href="#">2 - 7 Years</a></li>
-                        <li><a href="#">8 - 20 Years</a></li>
-                        <li><a href="#">View All</a></li>
+                        <li><a href="burger menu/Kids/nb-24.html">NB - 24 Months</a></li>
+                        <li><a href="burger menu/Kids/2-7.HTML">2 - 7 Years</a></li>
+                        <li><a href="burger menu/Kids/8 - 20.html">8 - 20 Years</a></li>
+                        <li><a href="burger menu/Kids/View All.html">View All</a></li>
                     </ul>
                 </li>
             </ul>
@@ -157,16 +164,16 @@
             <button class="expand-button">Customer Service &#43;</button>
             <div class="content">
                 <ul>
-                    <li><a href="how-to-order.html">How to Order</a></li>
-                    <li><a href="shipping-and-delivery.html">Shipping and Delivery</a></li>
+                    <li><a href="Customer service/how-to-order.html">How to Order</a></li>
+                    <li><a href="Customer service/shipping-and-delivery.html">Shipping and Delivery</a></li>
                 </ul>
             </div>
         
             <button class="expand-button">Company &#43;</button>
             <div class="content">
                 <ul>
-                    <li><a href="about-us.html">About Us</a></li>
-                    <li><a href="contacts.html">Contacts</a></li>
+                    <li><a href="company/about-us.html">About Us</a></li>
+                    <li><a href="company/contacts.html">Contacts</a></li>
                 </ul>
             </div>
         </section>
@@ -180,6 +187,7 @@
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
+    <!-- <script src="loadHeaderFooter.js"></script> -->
   
 </body>
 </html>

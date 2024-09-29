@@ -341,6 +341,66 @@ footer {
 }
 
 
+/* he she kids */
+.category-page {
+    padding: 20px;
+  }
+  
+  .search-container {
+    margin-bottom: 10px;
+  }
+  
+  .search-bar {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  .filter-sort-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  
+  .filter, .sort {
+    display: flex;
+    align-items: center;
+  }
+  
+  .filter label, .sort label {
+    margin-right: 5px;
+  }
+  
+  .item-count {
+    margin-bottom: 20px;
+  }
+  
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+
+
+
+
+  #language-switcher {
+    margin: 10px;
+    font-size: 16px;
+  }
+  
+  #language-switcher a {
+    margin: 0 5px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  #language-switcher a:hover {
+    text-decoration: underline;
+  }
+  
+
 
 /* Responsive Styles */
 

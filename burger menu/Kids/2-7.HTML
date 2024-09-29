@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles.css"> <!-- link to your CSS file -->
+  <title>2 - 7 Years</title>
+</head>
+<body>
+     <!-- Header -->
+     <header>
+        <div class="burger-menu" id="openMenu">&#9776;</div> <!-- Burger icon for menu -->
+        <div class="logo">
+            <a href="/index.html">
+                <img src="/images/brands/Logo G Boutique.svg" alt="The G Boutique Logo" class="logo">
+            </a>
+        </div>
+        <div class="header-right">
+            <div id="language-switcher">
+                <a href="languages/en.json" data-lang="en">EN</a> | 
+                <a href="languages/ar.json" data-lang="ar">AR</a> | 
+                <a href="languages/he.json" data-lang="he">HE</a>
+              </div>
+              
+            <div class="basket-icon">🛒</div>
+        </div>
+    </header>
+
+    <!-- Burger Menu Section -->
+    <div id="burgerMenu" class="menu-overlay">
+        <div class="menu-header">
+            <span class="close-btn" id="closeMenu">X</span>
+        </div>
+        <div class="menu-content">
+            <ul>
+                <li>
+                    <button class="dropdown-btn">She</button>
+                    <ul class="submenu">
+                        <li><a href="burger menu/She/stock.html">In Stock</a></li>
+                        <li><a href="burger menu/She/pre-order.html">Pre-Order</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <button class="dropdown-btn">He</button>
+                    <ul class="submenu">
+                        <li><a href="burger menu/He/stock.html">In Stock</a></li>
+                        <li><a href="burger menu/He/pre-order.html">Pre-Order</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <button class="dropdown-btn">Kids</button>
+                    <ul class="submenu">
+                        <li><a href="burger menu/Kids/nb-24.html">NB - 24 Months</a></li>
+                        <li><a href="burger menu/Kids/2-7.HTML">2 - 7 Years</a></li>
+                        <li><a href="burger menu/Kids/8 - 20.html">8 - 20 Years</a></li>
+                        <li><a href="burger menu/Kids/View All.html">View All</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+  <div class="category-page">
+    <!-- Search Bar -->
+    <div class="search-container">
+      <input type="text" placeholder="Search products..." class="search-bar" />
+    </div>
+
+    <!-- Filter & Sort Section -->
+    <div class="filter-sort-container">
+      <div class="filter">
+        <label>Filter by:</label>
+        <select>
+          <option value="price">Price</option>
+          <option value="brand">Brand</option>
+          <!-- Add other filter options -->
+        </select>
+      </div>
+      <div class="sort">
+        <label>Sort by:</label>
+        <select>
+          <option value="price-asc">Price: Low to High</option>
+          <option value="price-desc">Price: High to Low</option>
+          <option value="popularity">Popularity</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Number of Items -->
+    <div class="item-count">
+      <p>Showing <span id="item-number">20</span> items</p>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="product-grid">
+      <!-- Products will be loaded dynamically -->
+    </div>
+  </div>
+  <footer>
+    <p>&copy; 2024 G-Boutique.</p>
+</footer>
+  <script src="/script.js"></script>
+</body>
+</html>

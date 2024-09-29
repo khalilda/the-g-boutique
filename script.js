@@ -42,3 +42,90 @@ expandButtons.forEach(button => {
         content.style.display = content.style.display === 'block' ? 'none' : 'block';
     });
 });
+
+
+// Language switcher event listener
+document.querySelectorAll('#language-switcher a').forEach(langLink => {
+    langLink.addEventListener('click', function(e) {
+      e.preventDefault(); // Prevent the default link behavior
+      const selectedLang = this.getAttribute('data-lang');
+      loadLanguage(selectedLang); // Load the selected language
+    });
+  });
+  
+  // Function to load the appropriate language file
+  function loadLanguage(lang) {
+    fetch(`${lang}.json`)
+      .then(response => response.json())
+      .then(translations => {
+        // Update the search bar placeholder
+        document.getElementById('search-bar').placeholder = translations.searchPlaceholder;
+  
+        // Update filter and sort labels
+        document.querySelector('label[for="filter-select"]').textContent = translations.filterLabel;
+        document.querySelector('label[for="sort-select"]').textContent = translations.sortLabel;
+  
+        // Update item count text
+        updateItemCount(5, translations.itemCountText); // Example count
+      });
+  }
+  
+  // Update item count text dynamically
+  function updateItemCount(count, translation) {
+    const itemCountText = translation.replace('{{count}}', count);
+    document.getElementById('item-count-text').textContent = itemCountText;
+  }
+  
+  // Initialize with default language (e.g., EN)
+  document.addEventListener('DOMContentLoaded', () => {
+    loadLanguage('en'); // Load English by default when the page loads
+  });
+  
+
+  function loadLanguage(lang) {
+    // Set direction based on language (RTL for Arabic and Hebrew)
+    if (lang === 'ar' || lang === 'he') {
+      document.body.setAttribute('dir', 'rtl'); // Right-to-left
+    } else {
+      document.body.setAttribute('dir', 'ltr'); // Left-to-right
+    }
+  
+    // Fetch and apply the translations
+    fetch(`${lang}.json`)
+      .then(response => response.json())
+      .then(translations => {
+        document.getElementById('search-bar').placeholder = translations.searchPlaceholder;
+        document.querySelector('label[for="filter-select"]').textContent = translations.filterLabel;
+        document.querySelector('label[for="sort-select"]').textContent = translations.sortLabel;
+        updateItemCount(5, translations.itemCountText);
+      });
+  }
+
+
+  // Save user's language preference in localStorage
+function loadLanguage(lang) {
+    localStorage.setItem('preferredLang', lang);
+  
+    // Set direction based on language
+    if (lang === 'ar' || lang === 'he') {
+      document.body.setAttribute('dir', 'rtl');
+    } else {
+      document.body.setAttribute('dir', 'ltr');
+    }
+  
+    // Fetch translations
+    fetch(`${lang}.json`)
+      .then(response => response.json())
+      .then(translations => {
+        document.getElementById('search-bar').placeholder = translations.searchPlaceholder;
+        document.querySelector('label[for="filter-select"]').textContent = translations.filterLabel;
+        document.querySelector('label[for="sort-select"]').textContent = translations.sortLabel;
+        updateItemCount(5, translations.itemCountText);
+      });
+  }
+  
+  // Load language on page load from localStorage
+  document.addEventListener('DOMContentLoaded', () => {
+    const savedLang = localStorage.getItem('preferredLang') || 'en';
+    loadLanguage(savedLang);
+  });
