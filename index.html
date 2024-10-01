@@ -19,13 +19,27 @@
             </a>
         </div>
         <div class="header-right">
-            <div id="language-switcher">
-                <a href="languages/en.json" data-lang="en">EN</a> | 
-                <a href="languages/ar.json" data-lang="ar">AR</a> | 
-                <a href="languages/he.json" data-lang="he">HE</a>
+            <div class="language-selector">
+                <button class="language-button">🌍</button>
+                <div class="language-options">
+                  <button class="language-option">AR</button>
+                  <button class="language-option">HE</button>
+                  <button class="language-option">EN</button>
+                </div>
               </div>
               
-            <div class="basket-icon">🛒</div>
+              
+              <div class="basket">
+                <i class="basket-icon">🛒</i>
+              </div>
+              
+              <div id="basketModal" class="modal">
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <p>Your basket is empty.</p>
+                </div>
+              </div>
+              
         </div>
     </header>
 
@@ -109,8 +123,8 @@
         <section class="bestsellers">
             <h2>Our Bestsellers</h2>
             <div class="bestsellers-slider-container">
-                <button class="bestsellers-prev">&#10094;</button>
                 <div class="bestsellers-slider">
+                    <button class="arrow left-arrow">&lt;</button>
                     <div class="bestseller-item">
                         <img src="images/brands/bestseller1.svg" alt="Product 1">
                         <p>Product Name 1</p>
@@ -121,8 +135,18 @@
                         <p>Product Name 2</p>
                         <p>$89.99</p>
                     </div>
+                    <div class="bestseller-item">
+                        <img src="images/brands/bestseller2.svg" alt="Product 2">
+                        <p>Product Name 3</p>
+                        <p>$89.99</p>
+                    </div>
+                    <div class="bestseller-item">
+                        <img src="images/brands/bestseller2.svg" alt="Product 2">
+                        <p>Product Name 4</p>
+                        <p>$89.99</p>
+                    </div>
+                    <button class="arrow right-arrow">&gt;</button>
                 </div>
-                <button class="bestsellers-next">&#10095;</button>
             </div>
         </section>
 
