@@ -13,6 +13,20 @@ header {
     color: #fff;
 }
 
+
+
+/* basket */
+.close {
+    cursor: pointer;
+    font-size: 24px;
+    color:#000
+}
+.basket-font { 
+    font-size: 20px;
+    color: black;
+}
+
+
 /* Logo Styles */
 .logo {
     display: flex;
