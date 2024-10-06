@@ -290,28 +290,6 @@ header {
 
 
 /* Bestseller Section */
-/* .bestsellers {
-    align-items: center;
-  }
-  
-  .bestsellers-slider {
-    display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    width: 100%;
-  }
-  
-  .product {
-    min-width: 200px; 
-    margin: 0 10px;
-  }
-  
-  .arrow {
-    cursor: pointer;
-    background-color: #fff;
-    border: none;
-    font-size: 24px;
-  } */
 
 .bestsellers-section {
     display: flex;
