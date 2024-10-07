@@ -514,12 +514,34 @@ footer {
 }
 .item {
     text-align: center;
+    display: inline-table;
+    gap: 20px;
+    padding: 20px;
 }
 .item img {
-    width: 100%;
+    /* width: 100%; */
     height: auto;
 }
 
+
+/* Load more */
+.hidden {
+    display: none;
+}
+
+.load-more-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.load-more-btn:hover {
+    background-color: #0056b3;
+}
 
 /* Responsive Styles */
 
