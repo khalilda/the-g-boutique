@@ -21,56 +21,30 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Check if Swiper is loaded before initializing
-    if (typeof Swiper !== 'undefined') {
-        const swiper = new Swiper('.swiper-container', {
-            loop: true,
-            slidesPerView: 5,
-            spaceBetween: 30,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-        });
-    } else {
-        console.error('Swiper is not loaded.');
-    }
+    // Basket Modal
+    const basketIcon = document.querySelector('.basket-icon');
+    const basketModal = document.getElementById('basketModal');
+    const closeModal = document.querySelector('.close');
 
-    // Expandable Sections
-    const expandButtons = document.querySelectorAll('.expand-button');
-    expandButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const content = button.nextElementSibling;
-            content.style.display = content.style.display === 'block' ? 'none' : 'block';
-        });
+    basketIcon.addEventListener('click', () => {
+        basketModal.style.display = 'block';
     });
 
-    // Language switcher event listener
-    const languageOptions = document.querySelector('.language-options');
-    const languageSelector = document.querySelector('.language-selector');
+    closeModal.addEventListener('click', () => {
+        basketModal.style.display = 'none';
+    });
+
+    window.addEventListener('click', (event) => {
+        if (event.target === basketModal) {
+            basketModal.style.display = 'none';
+        }
+    });
+
+    // Load More Functionality
     const loadMoreBtn = document.querySelector('.load-more-btn');
     const hiddenItems = document.querySelectorAll('.hidden');
     const itemsToShow = 3; // How many items to show on each click
 
-    languageSelector.addEventListener('click', () => {
-        languageOptions.style.display = languageOptions.style.display === 'block' ? 'none' : 'block';
-    });
-
-    // Hide language options when clicking outside
-    document.addEventListener('click', (event) => {
-        if (!event.target.closest('.language-selector')) {
-            languageOptions.style.display = 'none';
-        }
-    });
-
-    // Hide language options when a language option is clicked
-    document.querySelectorAll('.language-option').forEach(option => {
-        option.addEventListener('click', () => {
-            languageOptions.style.display = 'none';
-        });
-    });
-
-    // Load More Functionality
     if (loadMoreBtn && hiddenItems.length > 0) {
         loadMoreBtn.addEventListener('click', () => {
             let itemsShown = 0;
@@ -90,4 +64,54 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
         console.error('Load More button or hidden items not found.');
     }
-});
+        // Language switcher event listener
+        const languageOptions = document.querySelector('.language-options');
+        const languageSelector = document.querySelector('.language-selector');
+    
+        if (languageOptions && languageSelector) {
+            languageSelector.addEventListener('click', () => {
+                languageOptions.style.display = languageOptions.style.display === 'block' ? 'none' : 'block';
+            });
+    
+            // Hide language options when clicking outside
+            document.addEventListener('click', (event) => {
+                if (!event.target.closest('.language-selector')) {
+                    languageOptions.style.display = 'none';
+                }
+            });
+    
+            // Hide language options when a language option is clicked
+            document.querySelectorAll('.language-option').forEach(option => {
+                option.addEventListener('click', () => {
+                    languageOptions.style.display = 'none';
+                });
+            });
+        } else {
+            console.error('Language options elements not found.');
+        }
+    
+        // Check if Swiper is loaded before initializing
+        if (typeof Swiper !== 'undefined') {
+            const swiper = new Swiper('.swiper-container', {
+                loop: true,
+                slidesPerView: 5,
+                spaceBetween: 30,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        } else {
+            console.error('Swiper is not loaded.');
+        }
+    
+        // Expandable Sections
+        const expandButtons = document.querySelectorAll('.expand-button');
+        expandButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                content.style.display = content.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    });
+

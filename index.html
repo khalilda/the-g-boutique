@@ -26,21 +26,19 @@
                   <button class="language-option">HE</button>
                   <button class="language-option">EN</button>
                 </div>
-              </div>
-              
-              
-              <div class="basket">
-                <i class="basket-icon">🛒</i>
-              </div>
-              
-              <div id="basketModal" class="modal">
-                <div class="modal-content">
-                  <span class="close">&times;</span>
-                  <p class="basket-font">Your basket is empty.</p>
-                </div>
-              </div>
-              
-        </div>
+               </div>    
+<!-- Basket Icon in the Main Menu -->
+<div class="basket">
+    <i class="basket-icon" aria-label="Basket">🛒</i>
+</div>
+
+<!-- Basket Modal -->
+<div id="basketModal" class="modal" role="dialog" aria-labelledby="basketModalLabel" aria-hidden="true">
+    <div class="modal-content">
+        <span class="close" aria-label="Close">&times;</span>
+        <p class="basket-font">Your basket is empty.</p>
+    </div>
+</div>     
       </header>
 
    
@@ -120,7 +118,7 @@
         
 
         <!-- Bestsellers Section -->
-        <section class="bestsellers">
+        <!-- <section class="bestsellers">
             <h2>Our Bestsellers</h2>
             <div class="bestsellers-slider-container">
                 <div class="bestsellers-slider">
@@ -148,7 +146,39 @@
                     <button class="arrow right-arrow">&gt;</button>
                 </div>
             </div>
-        </section>
+        </section> -->
+
+        <!-- Bestsellers Section -->
+<section id="bestsellers">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="images/brands/bestseller1.svg" alt="Best Seller 1">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/brands/bestseller2.svg" alt="Best Seller 2">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/brands/bestseller1.svg" alt="Best Seller 3">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/brands/bestseller2.svg" alt="Best Seller 3">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/brands/bestseller1.svg" alt="Best Seller 3">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/brands/bestseller2.svg" alt="Best Seller 3">
+            </div>
+            <!-- Add more slides as needed -->
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Navigation -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+</section>
 
         <!-- NEW IN Section -->
        
