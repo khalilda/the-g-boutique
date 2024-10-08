@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             });
 
-            // Hide button if all items are shown
+            // Check if there are still hidden items
             if (document.querySelectorAll('.hidden').length === 0) {
                 loadMoreBtn.style.display = 'none';
             }
