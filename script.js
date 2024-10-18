@@ -89,6 +89,36 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             console.error('Language options elements not found.');
         }
+
+            // Search Bar Functionality
+    const searchInput = document.getElementById('searchInput');
+    const searchButton = document.getElementById('searchButton');
+
+    if (searchInput && searchButton) {
+        searchButton.addEventListener('click', () => {
+            const query = searchInput.value.toLowerCase();
+            // Implement your search logic here
+            console.log('Search query:', query);
+            // Example: Filter items based on the query
+            const items = document.querySelectorAll('.item');
+            items.forEach(item => {
+                const itemName = item.textContent.toLowerCase();
+                if (itemName.includes(query)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+
+        searchInput.addEventListener('keypress', (event) => {
+            if (event.key === 'Enter') {
+                searchButton.click();
+            }
+        });
+    } else {
+        console.error('Search bar elements not found.');
+    }
     
         // Check if Swiper is loaded before initializing
         if (typeof Swiper !== 'undefined') {
@@ -105,13 +135,19 @@ document.addEventListener('DOMContentLoaded', function () {
             console.error('Swiper is not loaded.');
         }
     
+
+
         // Expandable Sections
         const expandButtons = document.querySelectorAll('.expand-button');
-        expandButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const content = button.nextElementSibling;
-                content.style.display = content.style.display === 'block' ? 'none' : 'block';
-            });
+    expandButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const content = button.nextElementSibling;
+            if (content) {
+                content.classList.toggle('show');
+            } else {
+                console.error('Content element not found.');
+            }
         });
+    });
     });
 
