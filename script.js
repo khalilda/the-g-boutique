@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+
     // Basket Modal
     const basketIcon = document.querySelector('.basket-icon');
     const basketModal = document.getElementById('basketModal');
