@@ -9,22 +9,36 @@
 <body>
    <!-- Header -->
    <header>
-    <div class="burger-menu" id="openMenu">&#9776;</div> <!-- Burger icon for menu -->
+    <div class="burger-menu" id="openMenu">&#9776;</div> 
     <div class="logo">
         <a href="/index.html">
             <img src="/images/brands/Logo G Boutique.svg" alt="The G Boutique Logo" class="logo">
         </a>
     </div>
     <div class="header-right">
-        <div id="language-switcher">
-            <a href="languages/en.json" data-lang="en">EN</a> | 
-            <a href="languages/ar.json" data-lang="ar">AR</a> | 
-            <a href="languages/he.json" data-lang="he">HE</a>
-          </div>
-          
-        <div class="basket-icon">🛒</div>
-    </div>
-</header>
+        <div class="language-selector">
+            <button class="language-button">🌍</button>
+            <div class="language-options">
+              <button class="language-option">AR</button>
+              <button class="language-option">HE</button>
+              <button class="language-option">EN</button>
+            </div>
+           </div>    
+<!-- Basket Icon in the Main Menu -->
+<div class="basket">
+<i class="basket-icon" aria-label="Basket">🛒</i>
+</div>
+
+<!-- Basket Modal -->
+<div id="basketModal" class="modal" role="dialog" aria-labelledby="basketModalLabel" aria-hidden="true">
+<div class="modal-content">
+    <span class="close" aria-label="Close">&times;</span>
+    <p class="basket-font">Your basket is empty.</p>
+</div>
+</div>     
+  </header>
+
+
 
 <!-- Burger Menu Section -->
 <div id="burgerMenu" class="menu-overlay">
@@ -36,24 +50,24 @@
             <li>
                 <button class="dropdown-btn">She</button>
                 <ul class="submenu">
-                    <li><a href="/burger menu/She/stock.html">In Stock</a></li>
-                    <li><a href="/burger menu/She/pre-order.html">Pre-Order</a></li>
+                    <li><a href="burger menu/She/stock.html">In Stock</a></li>
+                    <li><a href="burger menu/She/pre-order.html">Pre-Order</a></li>
                 </ul>
             </li>
             <li>
                 <button class="dropdown-btn">He</button>
                 <ul class="submenu">
-                    <li><a href="/burger menu/He/stock.html">In Stock</a></li>
-                    <li><a href="/burger menu/He/pre-order.html">Pre-Order</a></li>
+                    <li><a href="burger menu/He/stock.html">In Stock</a></li>
+                    <li><a href="burger menu/He/pre-order.html">Pre-Order</a></li>
                 </ul>
             </li>
             <li>
                 <button class="dropdown-btn">Kids</button>
                 <ul class="submenu">
-                    <li><a href="/burger menu/Kids/nb-24.html">NB - 24 Months</a></li>
-                    <li><a href="/burger menu/Kids/2-7.HTML">2 - 7 Years</a></li>
-                    <li><a href="/burger menu/Kids/8 - 20.html">8 - 20 Years</a></li>
-                    <li><a href="/burger menu/Kids/View All.html">View All</a></li>
+                    <li><a href="burger menu/Kids/nb-24.html">NB - 24 Months</a></li>
+                    <li><a href="burger menu/Kids/2-7.HTML">2 - 7 Years</a></li>
+                    <li><a href="burger menu/Kids/8 - 20.html">8 - 20 Years</a></li>
+                    <li><a href="burger menu/Kids/View All.html">View All</a></li>
                 </ul>
             </li>
         </ul>
@@ -91,9 +105,99 @@
     </div>
 
     <!-- Product Grid -->
-    <div class="product-grid">
-      <!-- Products will be loaded dynamically -->
-    </div>
+    <section class="items-grid">
+      <!-- List your items here -->
+      <div class="item">
+          <img src="/images/brands/sale/image 22.svg" alt="Item 1">
+          <h2>Item 1</h2>
+          <p>$20</p>
+      </div>
+      <div class="item">
+          <img src="/images/brands/sale/image 23.svg" alt="Item 2">
+          <h2>Item 2</h2>
+          <p>$25</p>
+      </div>
+      <div class="item">
+          <img src="/images/brands/sale/image 24.svg" alt="Item 2">
+          <h2>Item 2</h2>
+          <p>$25</p>
+      </div>
+      <div class="item">
+          <img src="/images/brands/sale/image 25 (1).svg" alt="Item 2">
+          <h2>Item 2</h2>
+          <p>$25</p>
+      </div>
+      <div class="item">
+          <img src="/images/brands/sale/image 26.svg" alt="Item 2">
+          <h2>Item 2</h2>
+          <p>$25</p>
+      </div>
+      <div class="item">
+          <img src="/images/brands/sale/image 27.svg" alt="Item 2">
+          <h2>Item 2</h2>
+          <p>$25</p>
+      </div>
+      <div class="item">
+          <img src="/images/brands/sale/image 28.svg" alt="Item 2">
+          <h2>Item 2</h2>
+          <p>$25</p>
+      </div>
+      <div class="item">
+          <img src="/images/brands/sale/image 29.svg" alt="Item 2">
+          <h2>Item 2</h2>
+          <p>$25</p>
+      </div>
+      <div class="item">
+          <img src="/images/brands/sale/image 30.svg" alt="Item 2">
+          <h2>Item 2</h2>
+          <p>$25</p>
+      </div>
+      <div class="item">
+          <img src="/images/brands/sale/image 25.svg" alt="Item 2">
+          <h2>Item 2</h2>
+          <p>$25</p>
+      </div>
+      <div class="item">
+          <img src="/images/brands/sale/image 31.svg" alt="Item 2">
+          <h2>Item 2</h2>
+          <p>$25</p>
+      </div>
+      <div class="item hidden">
+          <img src="/images/brands/new in/image 40.svg" alt="Item 2">
+          <h2>Item 2</h2>
+          <p>$25</p>
+      </div>
+      <div class="item hidden">
+          <img src="/images/brands/new in/image 47.svg" alt="Item 2">
+          <h2>Item 2</h2>
+          <p>$25</p>
+      </div>
+      <div class="item hidden">
+          <img src="/images/brands/new in/image 48.svg" alt="Item 2">
+          <h2>Item 2</h2>
+          <p>$25</p>
+      </div>
+      <div class="item hidden">
+          <img src="/images/brands/new in/image 40.svg" alt="Item 2">
+          <h2>Item 2</h2>
+          <p>$25</p>
+      </div>
+      <div class="item hidden">
+          <img src="/images/brands/new in/image 47.svg" alt="Item 2">
+          <h2>Item 2</h2>
+          <p>$25</p>
+      </div>
+      <div class="item hidden">
+          <img src="/images/brands/new in/image 48.svg" alt="Item 2">
+          <h2>Item 2</h2>
+          <p>$25</p>
+      </div>
+  </section>
+
+
+  <div class="load-more-container">
+      <button class="load-more-btn">Load More</button>
+  </div>
   </div>
   <section class="expandable-section">
     <button class="expand-button">Customer Service &#43;</button>
